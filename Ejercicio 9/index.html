@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9 - Galería Flexbox y Componentes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <span class="subtitulo">TechStore</span>
+        </div>
+
+        <div class="navbar-links texto-auxiliar">
+            <span>Inicio</span>
+            <span>Catálogo</span>
+        </div>
+    </nav>
+
+    <main class="contenedor">
+        
+        <header class="encabezado-pagina">
+            <h1 class="titulo-pantalla">Nuestros Productos</h1>
+            
+            <div class="grupo-input">
+                <label for="buscador" class="texto-auxiliar">Filtrar catálogo</label>
+                <input type="text" id="buscador" placeholder="Buscar por nombre...">
+            </div>
+        </header>
+
+        <section class="galeria-grid">
+            
+            <article class="card">
+                <div class="card-imagen">
+                    <img src="img/auriculares.jpg" alt="Auriculares Inalámbricos">
+                    <span class="chip">Nuevo</span>
+                </div>
+                <div class="card-contenido">
+                    <h2 class="subtitulo">Auriculares Inalámbricos</h2>
+                    <p class="texto-cuerpo">Sonido envolvente con cancelación de ruido activa.</p>
+                    <span class="texto-auxiliar">Envío gratis</span>
+                    <div class="card-acciones">
+                        <button class="btn-secundario">Ver info</button>
+                        <button class="btn-primario">Comprar</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-imagen">
+                    <img src="img/teclado.jpg" alt="Teclado Mecánico">
+                </div>
+                <div class="card-contenido">
+                    <h2 class="subtitulo">Teclado Mecánico</h2>
+                    <p class="texto-cuerpo">Switches red, retroiluminación RGB personalizable.</p>
+                    <span class="texto-auxiliar">Últimas unidades</span>
+                    <div class="card-acciones">
+                        <button class="btn-secundario">Ver info</button>
+                        <button class="btn-primario">Comprar</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-imagen">
+                    <img src="img/monitor.jpg" alt="Monitor 27 pulgadas QHD">
+                    <span class="chip">Oferta</span>
+                </div>
+                <div class="card-contenido">
+                    <h2 class="subtitulo">Monitor 27" QHD</h2>
+                    <p class="texto-cuerpo">Panel IPS, 144Hz, 1ms de tiempo de respuesta.</p>
+                    <span class="texto-auxiliar">Envío internacional</span>
+                    <div class="card-acciones">
+                        <button class="btn-secundario">Ver info</button>
+                        <button class="btn-primario">Comprar</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-imagen">
+                    <!-- CORREGIDO: La imagen ahora está dentro del div -->
+                    <img src="img/mouse.jpg" alt="Mouse Gamer Pro">
+                </div>
+                <div class="card-contenido">
+                    <h2 class="subtitulo">Mouse Gamer Pro</h2>
+                    <p class="texto-cuerpo">Sensor óptico de 16000 DPI, diseño ergonómico.</p>
+                    <span class="texto-auxiliar">Garantía 12 meses</span>
+                    <div class="card-acciones">
+                        <button class="btn-secundario">Ver info</button>
+                        <button class="btn-primario">Comprar</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-imagen">
+                    <img src="img/silla.jpg" alt="Silla Ergonómica">
+                    <span class="chip">Destacado</span>
+                </div>
+                <div class="card-contenido">
+                    <h2 class="subtitulo">Silla Ergonómica</h2>
+                    <p class="texto-cuerpo">Soporte lumbar ajustable, materiales transpirables.</p>
+                    <span class="texto-auxiliar">Envío gratis</span>
+                    <div class="card-acciones">
+                        <button class="btn-secundario">Ver info</button>
+                        <button class="btn-primario">Comprar</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-imagen">
+                    <img src="img/shopping.webp" alt="Webcam 4K Ultra">
+                </div>
+                <div class="card-contenido">
+                    <h2 class="subtitulo">Webcam 4K Ultra</h2>
+                    <p class="texto-cuerpo">Micrófono integrado, lente de cristal, autoenfoque.</p>
+                    <span class="texto-auxiliar">Stock disponible</span>
+                    <div class="card-acciones">
+                        <button class="btn-secundario">Ver info</button>
+                        <button class="btn-primario">Comprar</button>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+</body>
+</html>
