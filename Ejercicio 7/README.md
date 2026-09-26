@@ -1,0 +1,4 @@
+El concepto fundamental es entender cómo funciona el Modelo de Caja (Box Model) en CSS. Por defecto, CSS suma el padding y el border al ancho total (width) de un elemento (content-box). Al usar explícitamente box-sizing: border-box, le indica al navegador que el ancho definido incluya el padding y el borde, evitando que las tarjetas crezcan y se rompa la estructura de la fila.
+Si se elimina la regla box-sizing: border-box, el navegador volvería al valor por defecto (content-box). Entonces, el ancho real de la tarjeta no sería el 30% que definimos, sino: 30% (width) + 50px (padding izq y der) + 6px (borde izq y der).
+
+Al sumarse esos píxeles extra, las tres tarjetas juntas sobrepasarían el 100% del espacio disponible, empujando a la tercera tarjeta a la fila de abajo y destruyendo tu diseño. Al usar border-box, CSS "empuja" el padding y el border hacia adentro, manteniendo el tamaño total intacto y garantizando la consistencia visual.
