@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10 - Layout CSS Grid</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="grid-dashboard">
+        
+        <header class="header">
+            <div class="logo">
+                <img src="img/logo.svg" alt="Logo de la empresa en gestión de inventario">
+            </div>  
+            <h1 class="titulo-pantalla">Gestión de Inventario</h1>
+            <div class="header-acciones">
+                <button class="btn-secundario">Exportar Reporte</button>
+                <button class="btn-primario">Cerrar Sesión</button>
+            </div>
+        </header>
+
+        <aside class="sidebar">
+            <nav aria-label="Navegación principal">
+                <h2 class="subtitulo">Búsqueda rápida</h2>
+                
+                <div class="grupo-input">
+                    <label for="buscar-producto" class="texto-auxiliar">Código o nombre del producto</label>
+                    <input type="text" id="buscar-producto" placeholder="Ej: Martillo...">
+                </div>
+
+                <ul class="menu-lateral">
+                    <li><a href="#" class="texto-cuerpo activo">Catálogo General</a></li>
+                    <li><a href="#" class="texto-cuerpo">Promociones y Sorteos</a></li>
+                    <li><a href="#" class="texto-cuerpo">Proveedores</a></li>
+                    <li><a href="#" class="texto-cuerpo">Configuración</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            
+            <article class="card">
+                <div class="card-cabecera">
+                    <h3 class="subtitulo">Martillo de acero forjado (20oz)</h3>
+                    <span class="chip">Stock Disponible</span>
+                </div>
+                <p class="texto-cuerpo">Herramienta manual con mango ergonómico antideslizante. Ideal para trabajos de carpintería y construcción.</p>
+                <p class="texto-auxiliar">Última actualización: 15 de Octubre</p>
+                
+                <div class="card-acciones">
+                    <button class="btn-secundario">Editar producto</button>
+                    <button class="btn-primario">Añadir al carrito</button>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-cabecera">
+                    <h3 class="subtitulo">Taladro Percutor Inalámbrico 18V</h3>
+                    <span class="chip chip-alerta">Bajo Stock</span>
+                </div>
+                <p class="texto-cuerpo">Incluye dos baterías de ion de litio y maletín de transporte. Motor sin escobillas (brushless).</p>
+                <p class="texto-auxiliar">Última actualización: 20 de Octubre</p>
+                
+                <div class="card-acciones">
+                    <button class="btn-secundario">Editar producto</button>
+                    <button class="btn-primario">Solicitar pedido</button>
+                </div>
+            </article>
+            
+        </main>
+
+        <footer class="footer">
+            <p class="texto-auxiliar">© 2026 Sistema de Ferretería. Todos los derechos reservados.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
