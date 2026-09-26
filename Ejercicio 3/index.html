@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3 - Horario del Gimnasio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="contenedor">
+        <header>
+            <h1>Gimnasio "Energía Total"</h1>
+            <p>Grilla de actividades y clases grupales semanales</p>
+        </header>
+
+        <section class="tabla-responsiva">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Hora</th>
+                        <th>Lunes</th>
+                        <th>Martes</th>
+                        <th>Miércoles</th>
+                        <th>Jueves</th>
+                        <th>Viernes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>08:00 - 09:30</th>
+                        <td>Pilates</td>
+                        <td>Yoga</td>
+                        <td>Pilates</td>
+                        <td>Yoga</td>
+                        <td>Zumba</td>
+                    </tr>
+                    <tr>
+                        <th>09:30 - 11:30</th>
+                        <td>Zumba</td>
+                        <td rowspan="2" class="turno-extendido">Aparatos<br><small>(Turno Libre)</small></td>
+                        <td>Zumba</td>
+                        <td rowspan="2" class="turno-extendido">Aparatos<br><small>(Turno Libre)</small></td>
+                        <td>Pilates</td>
+                    </tr>
+                    <tr>
+                        <th>11:30 - 13:30</th>
+                        <td>Yoga</td>
+                        <!-- La celda del martes está cubierta por el rowspan superior -->
+                        <td>Artes Marciales</td>
+                        <!-- La celda del jueves está cubierta por el rowspan superior -->
+                        <td>Aparatos</td>
+                    </tr>
+                    <!-- Uso de COLSPAN: Una fila que unifica los 5 días -->
+                    <tr class="fila-limpieza">
+                        <th>13:30 - 14:30</th>
+                        <td colspan="5"> Mantenimiento y Desinfección de Salas</td>
+                    </tr>
+                    <tr>
+                        <th>14:30 - 16:00</th>
+                        <td>Artes Marciales</td>
+                        <td>Pilates</td>
+                        <td>Artes Marciales</td>
+                        <td>Zumba</td>
+                        <td>Yoga</td>
+                    </tr>
+                    <tr>
+                        <th>16:00 - 18:00</th>
+                        <td>Aparatos</td>
+                        <td>Zumba</td>
+                        <td>Pilates</td>
+                        <td>Artes Marciales</td>
+                        <td>Aparatos</td>
+                    </tr>
+                </tbody>
+
+                <!-- Pie de la tabla -->
+                <tfoot>
+                    <tr>
+                        <td colspan="6">
+                            * Se requiere reserva previa para las clases de Pilates y Yoga a través de la app. Los horarios de Aparatos son de libre acceso.
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+    </main>
+</body>
+</html>
