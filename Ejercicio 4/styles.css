@@ -1,0 +1,122 @@
+/* Variables CSS para mantener consistencia en el diseño */
+:root {
+    --color-fondo: #f0fdf4; /* Verde muy claro */
+    --color-tarjeta: #ffffff;
+    --color-texto: #1f2937;
+    --color-texto-secundario: #4b5563;
+    --color-primario: #16a34a; /* Verde principal */
+    --color-primario-hover: #15803d;
+    --color-borde: #d1d5db;
+    --color-foco: #86efac;
+    --fuente-principal: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: var(--fuente-principal);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+/* Contenedor principal tipo tarjeta */
+.contenedor {
+    background-color: var(--color-tarjeta);
+    max-width: 500px;
+    width: 100%;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    color: var(--color-primario);
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+}
+
+header p {
+    color: var(--color-texto-secundario);
+    font-size: 0.95rem;
+}
+
+/* Estructura del Formulario usando Flexbox */
+.formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.grupo-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+/* Estilos de Etiquetas (Labels) */
+label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--color-texto);
+}
+
+/* Estilos de Inputs y Textarea */
+input, textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--color-borde);
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+    color: var(--color-texto);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    resize: vertical; /* Permite al usuario redimensionar solo hacia abajo el textarea */
+}
+
+input::placeholder, textarea::placeholder {
+    color: #9ca3af;
+}
+
+/* Accesibilidad y Experiencia de Usuario: Indicador de Foco */
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--color-primario);
+    box-shadow: 0 0 0 3px var(--color-foco);
+}
+
+/* Botón de envío */
+.btn-enviar {
+    background-color: var(--color-primario);
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0.85rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    margin-top: 0.5rem;
+}
+
+.btn-enviar:hover {
+    background-color: var(--color-primario-hover);
+}
+
+.btn-enviar:active {
+    transform: scale(0.98);
+}
