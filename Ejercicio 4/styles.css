@@ -1,17 +1,17 @@
-/* Variables CSS para mantener consistencia en el diseño */
 :root {
-    --color-fondo: #f0fdf4; /* Verde muy claro */
-    --color-tarjeta: #ffffff;
-    --color-texto: #1f2937;
-    --color-texto-secundario: #4b5563;
-    --color-primario: #16a34a; /* Verde principal */
-    --color-primario-hover: #15803d;
-    --color-borde: #d1d5db;
-    --color-foco: #86efac;
-    --fuente-principal: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    --color-primario: #4f46e5;
+    --color-primario-hover: #4338ca;
+    --color-foco-sombra: rgba(79, 70, 229, 0.25);
+    --color-fondo-app: #f1f5f9;
+    --color-blanco: #ffffff;
+    --color-texto: #0f172a;
+    --color-texto-secundario: #64748b;
+    --color-borde: #cbd5e1;
+    --color-borde-hover: #94a3b8;
+
+    --font-family: 'Inter', system-ui, sans-serif;
 }
 
-/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -19,104 +19,105 @@
 }
 
 body {
-    background-color: var(--color-fondo);
+    font-family: var(--font-family);
+    background-color: var(--color-fondo-app);
     color: var(--color-texto);
-    font-family: var(--fuente-principal);
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    padding: 2rem;
+    padding: 2rem 1rem;
 }
 
-/* Contenedor principal tipo tarjeta */
 .contenedor {
-    background-color: var(--color-tarjeta);
-    max-width: 500px;
     width: 100%;
-    padding: 2.5rem;
+    max-width: 450px;
+}
+
+.titulo-pantalla { font-size: 24px; font-weight: 700; color: var(--color-texto); }
+.texto-cuerpo { font-size: 14px; font-weight: 400; color: var(--color-texto); }
+.texto-auxiliar { font-size: 13px; font-weight: 400; color: var(--color-texto-secundario); margin-top: 4px; }
+.label-bold { font-weight: 600; margin-bottom: 4px; }
+
+.card {
+    background-color: var(--color-blanco);
     border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    padding: 32px 24px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
-header {
+.card-cabecera {
+    margin-bottom: 24px;
     text-align: center;
-    margin-bottom: 2rem;
 }
 
-header h1 {
-    color: var(--color-primario);
-    margin-bottom: 0.5rem;
-    font-size: 1.8rem;
-}
-
-header p {
-    color: var(--color-texto-secundario);
-    font-size: 0.95rem;
-}
-
-/* Estructura del Formulario usando Flexbox */
-.formulario-contacto {
+.formulario {
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
+    gap: 16px;
 }
 
-.grupo-form {
+.grupo-input {
     display: flex;
     flex-direction: column;
-    gap: 0.4rem;
 }
 
-/* Estilos de Etiquetas (Labels) */
-label {
-    font-weight: 600;
-    font-size: 0.9rem;
-    color: var(--color-texto);
-}
-
-/* Estilos de Inputs y Textarea */
-input, textarea {
-    width: 100%;
-    padding: 0.75rem 1rem;
-    border: 1px solid var(--color-borde);
-    border-radius: 6px;
+.grupo-input input,
+.grupo-input textarea {
     font-family: inherit;
-    font-size: 1rem;
+    font-size: 14px;
+    padding: 12px 14px;
+    border-radius: 8px; 
+    border: 1px solid var(--color-borde);
+    background-color: #f8fafc;
     color: var(--color-texto);
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    resize: vertical; /* Permite al usuario redimensionar solo hacia abajo el textarea */
-}
-
-input::placeholder, textarea::placeholder {
-    color: #9ca3af;
-}
-
-/* Accesibilidad y Experiencia de Usuario: Indicador de Foco */
-input:focus, textarea:focus {
     outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    resize: vertical;
+}
+
+.grupo-input input:hover,
+.grupo-input textarea:hover {
+    border-color: var(--color-borde-hover);
+}
+
+.grupo-input input:focus,
+.grupo-input textarea:focus {
     border-color: var(--color-primario);
-    box-shadow: 0 0 0 3px var(--color-foco);
+    background-color: var(--color-blanco);
+    box-shadow: 0 0 0 4px var(--color-foco-sombra); 
 }
 
-/* Botón de envío */
-.btn-enviar {
+.grupo-input input::placeholder,
+.grupo-input textarea::placeholder {
+    color: #94a3b8;
+}
+
+.btn-primario {
     background-color: var(--color-primario);
-    color: white;
-    font-weight: bold;
-    font-size: 1rem;
-    padding: 0.85rem;
+    color: var(--color-blanco);
     border: none;
-    border-radius: 6px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px 16px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.1s ease;
-    margin-top: 0.5rem;
+    
+    transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
 }
 
-.btn-enviar:hover {
+.btn-formulario {
+    margin-top: 8px;
+    width: 100%;
+}
+
+.btn-primario:hover {
     background-color: var(--color-primario-hover);
+    box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.3);
 }
 
-.btn-enviar:active {
-    transform: scale(0.98);
+.btn-primario:active {
+    transform: scale(0.97); 
+    box-shadow: none;
 }
