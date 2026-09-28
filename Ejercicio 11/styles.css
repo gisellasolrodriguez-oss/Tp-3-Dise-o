@@ -1,0 +1,108 @@
+:root {
+    --color-primario: #0c6f28; 
+    --color-fondo-hover: #6ab477;
+    --color-acento: #4bc942; 
+    --color-fondo-claro: #e7f7ef;
+    --color-fondo-app: #85c1d4;
+    --color-blanco: #bcdedc;
+    --color-texto: #0f172a;
+    --color-texto-secundario: #7d866b;
+    --color-borde: #161d25;
+    --font-family: 'Inter', system-ui, sans-serif;
+    
+    --size-subtitulo: 16px;
+    --size-cuerpo: 14px;
+    --size-auxiliar: 12px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--color-fondo-app);
+    color: var(--color-texto);
+    line-height: 1.5;
+    display: flex;
+    justify-content: center;
+    padding: 3rem 1rem;
+}
+
+.contenedor {
+    width: 100%;
+    max-width: 500px;
+}
+
+.subtitulo { font-size: var(--size-subtitulo); font-weight: 600; }
+.texto-cuerpo { font-size: var(--size-cuerpo); font-weight: 400; }
+
+.card {
+    background-color: var(--color-blanco);
+    border-radius: 12px; 
+    padding: 16px; 
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); 
+    border: 1px solid var(--color-borde);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.card-cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--color-borde);
+    padding-bottom: 12px;
+}
+
+.lista-enlaces {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.lista-enlaces li {
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.lista-enlaces li:last-child {
+    border-bottom: none;
+}
+
+.lista-enlaces li:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+.lista-enlaces a {
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: var(--color-texto);
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.lista-enlaces a::before {
+    content: "▹";
+    color: var(--color-primario);
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 10px;
+    transition: transform 0.2s ease;
+}
+
+.lista-enlaces a:hover {
+    color: var(--color-primario);
+    background-color: var(--color-fondo-hover);
+    font-weight: 600;
+}
+
+.lista-enlaces a:hover::before {
+    transform: translateX(4px);
+}
