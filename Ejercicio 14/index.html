@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 14 - Variables CSS y Temas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <main class="contenedor">
+        <header class="cabecera">
+            <h1 class="titulo-pantalla">Dia y noche</h1>
+            <button id="btn-tema" class="btn-primario">Alternar Modo Oscuro</button>
+        </header>
+
+        <section class="tarjeta">
+            <h2 class="subtitulo">El ciclo de la vida</h2>
+            <p class="texto-cuerpo">
+"No es tanto la noche para que duerman los ignorantes cuanto para que velen los sabios. Y si el día ejecuta, la noche previene."            </p>
+            <img src="imagen.jpg" alt="Imagen ilustrativa" class="imagen-tarjeta">
+        </section>
+    </main>
+    <script>
+        const botonTema = document.getElementById('btn-tema');
+        botonTema.addEventListener('click', () => {
+            document.body.classList.toggle('modo-oscuro');
+        });
+    </script>
+</body>
+</html>
