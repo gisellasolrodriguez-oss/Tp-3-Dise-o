@@ -1,0 +1,159 @@
+:root {
+    --color-primario: #0f172a;
+    --color-acento-valido: #10b981;
+    --color-alerta-invalido: #ef4444;
+    --color-fondo-app: #f0defc;
+    --color-blanco: #ffffff;
+    --color-borde: #cbd5e1;
+    --color-texto: #1e293b;
+    --color-texto-secundario: #64748b;
+    --font-family: 'nunito', arial, sansserif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--color-fondo-app);
+    color: var(--color-texto);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+}
+
+.contenedor { width: 100%; max-width: 480px; }
+
+.card {
+    background-color: var(--color-blanco);
+    border-radius: 12px;
+    padding: 32px 24px;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+.card-cabecera { text-align: center; margin-bottom: 24px; }
+.titulo-pantalla { font-size: 24px; font-weight: 700; }
+.subtitulo { font-size: 18px; font-weight: 600; margin-bottom: 16px; border-bottom: 1px solid var(--color-borde); padding-bottom: 8px;}
+.texto-cuerpo { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+.texto-auxiliar { font-size: 14px; color: var(--color-texto-secundario); margin-top: 4px; }
+
+
+.control-paso { display: none; }
+
+.seccion-paso {
+    display: none;
+    opacity: 0;
+    animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateX(10px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+#paso-1:checked ~ .formulario-multistep #contenido-paso-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#paso-2:checked ~ .formulario-multistep #contenido-paso-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.stepper-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    gap: 10px;
+}
+
+.stepper-bola {
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    display: flex; justify-content: center; align-items: center;
+    font-weight: bold; font-size: 14px;
+    background-color: var(--color-borde);
+    color: var(--color-blanco);
+    transition: background-color 0.3s ease;
+}
+
+.stepper-linea {
+    height: 4px; width: 60px;
+    background-color: var(--color-borde);
+    border-radius: 2px;
+}
+
+#paso-1:checked ~ .stepper-visual .bola-1 { background-color: var(--color-primario); }
+#paso-2:checked ~ .stepper-visual .bola-1,
+#paso-2:checked ~ .stepper-visual .bola-2,
+#paso-2:checked ~ .stepper-visual .stepper-linea {
+    background-color: var(--color-primario);
+}
+
+.grupo-input { display: flex; flex-direction: column; }
+
+.label-requerido::after {
+    content: " *";
+    color: var(--color-alerta-invalido);
+}
+
+.grupo-input input {
+    font-family: inherit; font-size: 14px;
+    padding: 12px;
+    border: 2px solid var(--color-borde);
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.grupo-input input:focus { border-color: var(--color-primario); }
+
+.grupo-input input:required:valid:not(:placeholder-shown) {
+    border-color: var(--color-acento-valido);
+    background-color: #f0fdf4;
+}
+
+.grupo-input input:required:invalid:not(:placeholder-shown) {
+    border-color: var(--color-alerta-invalido);
+    background-color: #fef2f2;
+}
+
+.mensaje-error {
+    font-size: 12px;
+    color: var(--color-alerta-invalido);
+    margin-top: 6px;
+    display: none;
+}
+
+.grupo-input input:required:invalid:not(:placeholder-shown) ~ .mensaje-error {
+    display: block;
+}
+
+.card-acciones { display: flex; margin-top: 8px; }
+.derecha { justify-content: flex-end; }
+.separadas { justify-content: space-between; }
+
+button, .btn-primario, .btn-secundario {
+    font-family: inherit; font-size: 14px; font-weight: 600;
+    padding: 10px 16px; border-radius: 8px;
+    cursor: pointer; transition: all 0.2s ease;
+    text-align: center;
+}
+
+.btn-primario {
+    background-color: var(--color-primario);
+    color: var(--color-blanco); border: none;
+}
+.btn-primario:hover { opacity: 0.9; }
+
+.btn-secundario {
+    background-color: transparent;
+    color: var(--color-texto-secundario);
+    border: 1px solid var(--color-borde);
+}
+.btn-secundario:hover { background-color: var(--color-fondo-app); }

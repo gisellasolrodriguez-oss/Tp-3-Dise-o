@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 19 - Formulario Multi-step y Validación</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <main class="contenedor">
+        <article class="card">
+            <header class="card-cabecera">
+                <h1 class="titulo-pantalla">Alta de Proveedor</h1>
+                <p class="texto-auxiliar">Complete el registro en 2 sencillos pasos.</p>
+            </header>
+
+            <input type="radio" name="form-step" id="paso-1" class="control-paso" checked>
+            <input type="radio" name="form-step" id="paso-2" class="control-paso">
+
+            <div class="stepper-visual">
+                <div class="stepper-bola bola-1">1</div>
+                <div class="stepper-linea"></div>
+                <div class="stepper-bola bola-2">2</div>
+            </div>
+
+            <form action="#" method="POST" class="formulario-multistep">
+
+                <section class="seccion-paso" id="contenido-paso-1">
+                    <h2 class="subtitulo">Paso 1: Datos de Contacto</h2>
+                    
+                    <div class="grupo-input">
+                        <label for="nombre" class="texto-cuerpo label-requerido">Nombre del representante</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ej: Carlos Gómez" required pattern="[A-Za-zÀ-ÿ\s]{3,}">
+                        <span class="mensaje-error">Debe contener al menos 3 letras y solo texto.</span>
+                    </div>
+
+                    <div class="grupo-input">
+                        <label for="email" class="texto-cuerpo label-requerido">Correo electrónico</label>
+                        <input type="email" id="email" name="email" placeholder="contacto@empresa.com" required>
+                        <span class="mensaje-error">Ingrese un formato de correo válido.</span>
+                    </div>
+
+                    <div class="card-acciones derecha">
+                        <label for="paso-2" class="btn-primario">Siguiente Paso &rarr;</label>
+                    </div>
+                </section>
+
+                <section class="seccion-paso" id="contenido-paso-2">
+                    <h2 class="subtitulo">Paso 2: Datos Comerciales</h2>
+                    
+                    <div class="grupo-input">
+                        <label for="cuit" class="texto-cuerpo label-requerido">CUIT / NIT</label>
+                        <input type="text" id="cuit" name="cuit" placeholder="Ej: 30-12345678-9" required pattern="\d{2}-\d{8}-\d{1}">
+                        <span class="mensaje-error">Formato requerido: XX-XXXXXXXX-X</span>
+                    </div>
+
+                    <div class="grupo-input">
+                        <label for="rubro" class="texto-cuerpo">Rubro (Opcional)</label>
+                        <!-- Input sin 'required', siempre es válido -->
+                        <input type="text" id="rubro" name="rubro" placeholder="Ej: Herramientas eléctricas">
+                    </div>
+
+                    <div class="card-acciones separadas">
+                        <label for="paso-1" class="btn-secundario">&larr; Volver</label>
+                        <button type="submit" class="btn-primario">Completar Registro</button>
+                    </div>
+                </section>
+
+            </form>
+        </article>
+    </main>
+
+</body>
+</html>
