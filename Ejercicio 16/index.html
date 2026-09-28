@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 16 Animaciones</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="contenedor-mascota">
+  <img 
+    src="aligator.gif" 
+    alt="Mascota divertida" 
+    class="imagen-divertida"
+  >
+</div>
+    <main class="contenedor">
+        <header class="cabecera-animada">
+            <h1 class="titulo-pantalla">Animaciones</h1>
+            <button class="btn-primario" aria-busy="true">
+                <span class="spinner"></span>
+                Procesando datos...
+            </button>
+        </header>
+        
+        <section class="galeria-cards">
+            <article class="card retraso-1">
+                <h2 class="subtitulo">Aparición Fluida</h2>
+                <p class="texto-cuerpo">Esta tarjeta entra en la pantalla desde abajo mientras su opacidad pasa de 0 a 1.</p>
+            </article>
+
+            <article class="card retraso-2">
+                <h2 class="subtitulo">Retraso Escalonado</h2>
+                <p class="texto-cuerpo">Aplicando un <code>animation-delay</code> diferente a cada elemento, logramos un efecto de cascada.</p>
+            </article>
+
+            <article class="card retraso-3">
+                <h2 class="subtitulo">Rendimiento Óptimo</h2>
+                <p class="texto-cuerpo">Animar <code>transform</code> y <code>opacity</code> es la forma más eficiente para el navegador.</p>
+            </article>
+        </section>
+    </main>
+
+</body>
+</html>
