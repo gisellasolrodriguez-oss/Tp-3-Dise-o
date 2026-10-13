@@ -1,296 +1,201 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ÁMBAR — Colección Femenina</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <meta
+      name="description"
+      content="Colección femenina premium con piezas pensadas para moverse entre la ciudad y la intimidad de la casa."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar container">
+        <div class="brand-block">
+          <span class="brand-mark">A</span>
+          <div class="brand-text">
+            <span class="brand-name">ÁMBAR</span>
+            <span class="brand-subtitle">Colección femenina</span>
+          </div>
+        </div>
 
-    <header class="navbar-contenedor">
-        <nav class="navbar" aria-label="Navegación principal">
-            <a href="#inicio" class="logo">
-                <span class="logo-isotipo">✦</span> ÁMBAR
-            </a>
-
-            <input type="checkbox" id="menu-toggle" class="menu-checkbox" aria-label="Abrir menú de navegación">
-            <label for="menu-toggle" class="menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
-
-            <ul class="nav-links">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#coleccion">Colección</a></li>
-                <li><a href="#testimonios">Comunidad</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-                <li><a href="#coleccion" class="btn-nav">Ver Tienda</a></li>
-            </ul>
+        <nav class="main-nav" aria-label="Navegación principal">
+          <a href="#new">Novedades</a>
+          <a href="#collections">Colecciones</a>
+          <a href="#essentials">Básicos</a>
+          <a href="#journal">Journal</a>
         </nav>
-    </header>
 
-    <main>
-        <section id="inicio" class="hero">
-            <div class="hero-overlay"></div>
-            <div class="hero-contenido">
-                <span class="chip chip-hero animacion-flotante">✦ Nueva Temporada Primavera / Verano</span>
-                <h1 class="hero-titulo">Prendas con alma, diseñadas para brillar</h1>
-                <p class="hero-subtitulo">
-                    Prendas confeccionadas éticamente con texturas nobles, linos puros y cortes contemporáneos que celebran la feminidad y el confort diario.
-                </p>
-                <div class="hero-acciones">
-                    <a href="#coleccion" class="btn-primario animacion-pulso">Explorar Colección</a>
-                    <a href="#contacto" class="btn-secundario">Asesoría Personalizada</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="beneficios-seccion">
-            <div class="beneficio-item">
-                <span class="beneficio-icono">🌿</span>
-                <div>
-                    <h2 class="beneficio-titulo">Fibras 100% Naturales</h2>
-                    <p class="texto-auxiliar">Algodón orgánico y linos frescos de primera selección.</p>
-                </div>
-            </div>
-            <div class="beneficio-item">
-                <span class="beneficio-icono">✨</span>
-                <div>
-                    <h2 class="beneficio-titulo">Cortes Exclusivos</h2>
-                    <p class="texto-auxiliar">Moldería estudiada para un calce cómodo y favorecedor.</p>
-                </div>
-            </div>
-            <div class="beneficio-item">
-                <span class="beneficio-icono">📦</span>
-                <div>
-                    <h2 class="beneficio-titulo">Envíos Cuidados</h2>
-                    <p class="texto-auxiliar">Packaging compostable y perfumado a todo el país.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="coleccion" class="seccion-contenedor">
-            <header class="seccion-cabecera">
-                <span class="seccion-tag">Favoritos de Temporada</span>
-                <h2 class="seccion-titulo">Piezas Clave del Guardarropa</h2>
-                <p class="seccion-bajada">Prendas versátiles pensadas para acompañar tu ritmo del día a la noche.</p>
-            </header>
-
-            <div class="productos-grid">
-
-                <article class="card-producto">
-                    <div class="card-imagen-wrapper">
-                        <img src="imgamarillo.jpg" alt="Vestido midi en color amarillo cálido" loading="lazy">
-                        <span class="chip-flotante">Nuevo</span>
-                    </div>
-                    <div class="card-cuerpo">
-                        <span class="texto-auxiliar">Conjuntos</span>
-                        <h3 class="producto-nombre">Conjunto algodón 'Aura'</h3>
-                        <p class="producto-precio">$42.500</p>
-                        <button class="btn-card" type="button">Añadir al Carrito</button>
-                    </div>
-                </article>
-
-                <article class="card-producto">
-                    <div class="card-imagen-wrapper">
-                        <img src="imgnegro.jpg" alt="Conjunto de lino color arena" loading="lazy">
-                        <span class="chip-flotante chip-acento">Best Seller</span>
-                    </div>
-                    <div class="card-cuerpo">
-                        <span class="texto-auxiliar">Sastrería Relajada</span>
-                        <h3 class="producto-nombre">Vestido Sastrero Elegante Bahía</h3>
-                        <p class="producto-precio">$58.000</p>
-                        <button class="btn-card" type="button">Añadir al Carrito</button>
-                    </div>
-                </article>
-
-                <article class="card-producto">
-                    <div class="card-imagen-wrapper">
-                        <img src="img.jpg" alt="jeans rigido" loading="lazy">
-                    </div>
-                    <div class="card-cuerpo">
-                        <span class="texto-auxiliar">Jeans</span>
-                        <h3 class="producto-nombre">Jeans rígido</h3>
-                        <p class="producto-precio">$29.900</p>
-                        <button class="btn-card" type="button">Añadir al Carrito</button>
-                    </div>
-                </article>
-
-                <article class="card-producto">
-                    <div class="card-imagen-wrapper">
-                        <img src="imgpalazo.jpg" alt="Pantalón palazzo fluido tono marfil" loading="lazy">
-                        <span class="chip-flotante">Edición Limitada</span>
-                    </div>
-                    <div class="card-cuerpo">
-                        <span class="texto-auxiliar">Pantalones</span>
-                        <h3 class="producto-nombre">Palazzo Seda & Lino Albor</h3>
-                        <p class="producto-precio">$38.700</p>
-                        <button class="btn-card" type="button">Añadir al Carrito</button>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <section id="testimonios" class="testimonios-seccion">
-            <header class="seccion-cabecera">
-                <span class="seccion-tag">Experiencias Reales</span>
-                <h2 class="seccion-titulo">Lo que dicen nuestras clientas</h2>
-                <p class="seccion-bajada">Desliza horizontalmente para leer las opiniones de nuestra comunidad.</p>
-            </header>
-
-            <div class="carrusel-snap" tabindex="0" role="region" aria-label="Carrusel de testimonios">
-                <article class="testimonio-card">
-                    <div class="estrellas" aria-label="5 de 5 estrellas">★★★★★</div>
-                    <p class="testimonio-texto">
-                        "La calidad del lino es superior a cualquier otra marca que haya probado. La caída que tiene el vestido Midi Terracota es impecable, además llegó en dos días."
-                    </p>
-                    <div class="testimonio-autora">
-                        <div class="autora-avatar">VS</div>
-                        <div>
-                            <p class="autora-nombre">Valentina Solís</p>
-                            <span class="texto-auxiliar">Compró el Vestido Aura</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="testimonio-card">
-                    <div class="estrellas" aria-label="5 de 5 estrellas">★★★★★</div>
-                    <p class="testimonio-texto">
-                        "Me asesoraron por WhatsApp para elegir el talle exacto y acertaron por completo. Es ropa que realmente te hace sentir fresca, segura y elegante."
-                    </p>
-                    <div class="testimonio-autora">
-                        <div class="autora-avatar">MR</div>
-                        <div>
-                            <p class="autora-nombre">Mariana Rivas</p>
-                            <span class="texto-auxiliar">Compró el Conjunto Bahía</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="testimonio-card">
-                    <div class="estrellas" aria-label="5 de 5 estrellas">★★★★★</div>
-                    <p class="testimonio-texto">
-                        "El packaging viene con un aroma delicioso y sin plásticos de un solo uso. Me encantó la filosofía detrás de cada prenda y la confección de las costuras."
-                    </p>
-                    <div class="testimonio-autora">
-                        <div class="autora-avatar">CB</div>
-                        <div>
-                            <p class="autora-nombre">Camila Bonetti</p>
-                            <span class="texto-auxiliar">Compró la Blusa Durazno</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="testimonio-card">
-                    <div class="estrellas" aria-label="5 de 5 estrellas">★★★★★</div>
-                    <p class="testimonio-texto">
-                        "Tenía dudas con el largo del pantalón palazzo por mi estatura, pero la tabla de medidas es super clara y el calce es exacto. Sin dudas vuelvo a comprar."
-                    </p>
-                    <div class="testimonio-autora">
-                        <div class="autora-avatar">LP</div>
-                        <div>
-                            <p class="autora-nombre">Luciana Pardo</p>
-                            <span class="texto-auxiliar">Compró el Palazzo Albor</span>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <section id="contacto" class="seccion-contenedor">
-            <div class="contacto-wrapper">
-                <div class="contacto-info">
-                    <span class="seccion-tag">Atención Personalizada</span>
-                    <h2 class="seccion-titulo">¿Dudas con talles, telas o envíos?</h2>
-                    <p class="texto-cuerpo">
-                        Escribinos y una asesora de estilo te responderá en menos de 24 horas para ayudarte a encontrar tu prenda ideal.
-                    </p>
-                    
-                    <ul class="contacto-detalles">
-                        <li>📍 <strong>Showroom:</strong> Galería del Parque, Local 12</li>
-                        <li>💌 <strong>Email:</strong> hola@ambarstyle.com</li>
-                        <li>🕒 <strong>Horarios:</strong> Lunes a Sábados de 10:00 a 19:30</li>
-                    </ul>
-                </div>
-
-                <form action="#" method="POST" class="formulario-contacto">
-                    <div class="grupo-input">
-                        <label for="nombre" class="label-form">Nombre y Apellido</label>
-                        <input type="text" id="nombre" name="nombre" placeholder="Ej: Sofía Martínez" required>
-                    </div>
-
-                    <div class="grupo-input">
-                        <label for="email" class="label-form">Correo Electrónico</label>
-                        <input type="email" id="email" name="email" placeholder="sofia@ejemplo.com" required>
-                    </div>
-
-                    <div class="grupo-input">
-                        <label for="asunto" class="label-form">Motivo de consulta</label>
-                        <select id="asunto" name="asunto" class="select-form" required>
-                            <option value="" disabled selected>Selecciona una opción</option>
-                            <option value="talles">Guía de talles y medidas</option>
-                            <option value="showroom">Cita previa en showroom</option>
-                            <option value="envios">Estado de mi pedido / Envíos</option>
-                            <option value="otro">Otro motivo</option>
-                        </select>
-                    </div>
-
-                    <div class="grupo-input">
-                        <label for="mensaje" class="label-form">Mensaje</label>
-                        <textarea id="mensaje" name="mensaje" rows="4" placeholder="¿En qué prenda estás interesada o qué duda tienes?" required></textarea>
-                    </div>
-
-                    <button type="submit" class="btn-primario btn-bloque">Enviar Mensaje</button>
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="footer-grid">
-            <div class="footer-col brand-col">
-                <span class="logo logo-footer">✦ ÁMBAR</span>
-                <p class="texto-auxiliar">Moda femenina consciente creada con materiales nobles, tonos cálidos y diseño atemporal.</p>
-            </div>
-
-            <div class="footer-col">
-                <h4 class="footer-titulo">Navegación</h4>
-                <ul class="footer-links">
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#coleccion">Colección</a></li>
-                    <li><a href="#testimonios">Testimonios</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-col">
-                <h4 class="footer-titulo">Políticas</h4>
-                <ul class="footer-links">
-                    <li><a href="#">Cambios y Devoluciones</a></li>
-                    <li><a href="#">Guía de Cuidados de Lino</a></li>
-                    <li><a href="#">Términos y Condiciones</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-col">
-                <h4 class="footer-titulo">Comunidad</h4>
-                <p class="texto-auxiliar">Seguinos en redes para enterarte de lanzamientos exclusivos y preventas:</p>
-                <div class="redes-sociales">
-                    <a href="#" class="red-chip" aria-label="Instagram">Instagram</a>
-                    <a href="#" class="red-chip" aria-label="Pinterest">Pinterest</a>
-                </div>
-            </div>
+        <div class="top-actions" aria-label="Acciones del usuario">
+          <a href="#search" aria-label="Buscar">Buscar</a>
+          <a href="#cart" aria-label="Carrito">Carrito (2)</a>
         </div>
+      </header>
 
-        <div class="footer-bottom">
-            <p class="texto-auxiliar">© 2026 ÁMBAR Moda Femenina. Todos los derechos reservados. Desarrollado con HTML5 y CSS3.</p>
+      <main>
+        <section class="hero container">
+          <div class="hero-copy">
+            <p class="eyebrow">Nueva temporada</p>
+            <h1>Estilo sobrio, presencia contundente.</h1>
+            <p class="lead">
+              Diseños de alta costura pensados para acompañarte desde la mañana hasta la noche,
+              con una identidad que habla en capas: preciso, cálido y femenino.
+            </p>
+            <div class="cta-group">
+              <a class="button primary" href="#collections">Comprar ahora</a>
+              <a class="button secondary" href="#journal">Ver lookbook</a>
+            </div>
+
+            <ul class="pills" aria-label="Detalles de la colección">
+              <li>100% algodón</li>
+              <li>Edición limitada</li>
+              <li>Entrega a domicilio</li>
+            </ul>
+          </div>
+
+          <div class="hero-visual">
+            <div class="feature-card card-primary">
+              <img src="imgnegro.jpg" alt="Modelo con prenda negra" />
+              <div class="card-meta">
+                <span class="meta-tag">New</span>
+                <strong>Set de trabajo</strong>
+              </div>
+            </div>
+            <div class="mini-card card-accent">
+              <img src="imgamarillo.jpg" alt="Prenda en color amarillo" />
+              <span>Color story</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="stats container" aria-label="Estadísticas de la marca">
+          <div>
+            <strong>12k+</strong>
+            <span>Clientes</span>
+          </div>
+          <div>
+            <strong>4.9/5</strong>
+            <span>Valoración</span>
+          </div>
+          <div>
+            <strong>48h</strong>
+            <span>Envío</span>
+          </div>
+          <div>
+            <strong>18</strong>
+            <span>Estilos</span>
+          </div>
+        </section>
+
+        <section id="collections" class="featured container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Colecciones</p>
+              <h2>Lo esencial, con carácter.</h2>
+            </div>
+            <a href="#new">Ver todo</a>
+          </div>
+
+          <div class="product-grid">
+            <article class="product-card large">
+              <img src="img.jpg" alt="Mujer con abrigo largo" />
+              <div class="product-info">
+                <div>
+                  <span class="product-label">Core</span>
+                  <h3>Trench over</h3>
+                </div>
+                <span class="price">$180</span>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <img src="imgpalazo.jpg" alt="Detalle de prenda con colores neutros" />
+              <div class="product-info">
+                <div>
+                  <span class="product-label">Capsule</span>
+                  <h3>Silk layer</h3>
+                </div>
+                <span class="price">$120</span>
+              </div>
+            </article>
+
+            <article class="product-card accent-card">
+              <div class="callout-content">
+                <p class="eyebrow">Edit</p>
+                <h3>Gama tierra</h3>
+                <p>Texturas suaves, volumen limpio y líneas eternas.</p>
+                <a href="#essentials">Explorar</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="essentials" class="editorial container">
+          <div class="editorial-visual">
+            <img src="imgamarillo.jpg" alt="Prenda amarilla con estilo editorial" />
+          </div>
+          <div class="editorial-copy">
+            <p class="eyebrow">Básicos con actitud</p>
+            <h2>Personajes de la ciudad en movimiento.</h2>
+            <p>
+              Cada pieza combina una silueta funcional con un tono elegante, creando capas que se
+              adaptan a la frecuencia de la vida cotidiana sin perder fuerza visual.
+            </p>
+            <ul>
+              <li>Materiales premium y duraderos</li>
+              <li>Volúmenes estructurados y silenciosos</li>
+              <li>Versatilidad para día y noche</li>
+            </ul>
+            <a class="button primary" href="#new">Descubrir básicos</a>
+          </div>
+        </section>
+
+        <section id="journal" class="journal container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Journal</p>
+              <h2>Inspiración en cada detalle.</h2>
+            </div>
+          </div>
+
+          <div class="journal-grid">
+            <article class="journal-card journal-card-dark">
+              <span>01</span>
+              <h3>Materiales que cuentan una historia.</h3>
+            </article>
+            <article class="journal-card journal-card-light">
+              <span>02</span>
+              <h3>Cómo armar un outfit de 3 capas.</h3>
+            </article>
+            <article class="journal-card journal-card-detail">
+              <span>03</span>
+              <h3>La paleta de otoño con un gesto más personal.</h3>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer container">
+        <div>
+          <span class="brand-name footer-brand">ÁMBAR</span>
         </div>
-    </footer>
-
-</body>
+        <div class="footer-links">
+          <a href="#collections">Colecciones</a>
+          <a href="#essentials">Básicos</a>
+          <a href="#journal">Journal</a>
+        </div>
+        <div class="footer-meta">
+          <span>@2026 ÁMBAR</span>
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>
